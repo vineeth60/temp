@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showData(){
+           // alert("Hello World")
+           let name = document.getElementById("name").value
+           let email=document.getElementById("email").value
+           let password=document.getElementById("password").value
+           let dob=document.getElementById("dob").value
+           //data.innerHTML = name + " , " + email + " , " + password + " , " + dob
+           data.innerHTML = `${name},${email},${password},${dob}`
+        }
+    </script>
+</head>
+<body>
+    <h1>New User Registration Form</h1>
+    <p><input type="text" id="name" placeholder="Enter Name"></p>
+    <p><input type="text" id="email" placeholder="Enter Email"></p>
+    <p><input type="password" id="password" placeholder="Enter password"></p>
+    <p><input type="datetime-local" id="dob" /></p>
+    <button onclick="showData()"> register</button>
+    <hr/>
+    <div id="data" >vccc </div>
+</body>
+</html>

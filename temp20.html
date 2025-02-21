@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const cart = {}
+        const addtocart = (id) => {
+            cart[id] += 1
+            
+            console.log(cart);
+            }
+        const products = [
+            {id:1,name:"Product 1",price:50},
+            {id:2,name:"Product 2",price:40},
+            {id:3,name:"Product 3",price:70},
+        ];
+        const showproducts = () => {
+            let str = ""
+            products.forEach((value) => {
+                str += `<div>${value.id} ${value.name} ${value.price} <button onclick="addtocart(${value.id})">Add to Cart</button></div>`
+            });
+            divProducts.innerHTML = str
+        };
+    </script>
+</head>
+<body onload="showproducts()">
+    <h1>My Store</h1>
+    <hr>
+    <div id="divProducts">Products</div>
+    
+</body>
+</html>
